@@ -9,7 +9,7 @@ for i in 0..serialNumber-1 do
 	if i != 0 then
 		temp = number.to_s
 		tempRes = ""
-		for j in 0..temp.length do
+		for j in 0..temp.length-1 do
 			if j==temp.length-1 or temp[j] != temp[j+1] then
 				tempRes += count.to_s + temp[j]
 				count = 1
