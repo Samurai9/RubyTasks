@@ -1,0 +1,15 @@
+First Name, Second Name, Phone Number, Address, Website URL
+Vladimir, Bazhanov, +79375295454, Pushkina 46, http://flatstack.com
+Egor, Bazhanov, +7 796 77 77 777, Unknown street 76, http://google.com
+Vladimir, Derjabin, , Kirova 21, https://unity.com
+Vadim, Egorov, , Ufa, http://vk.com
+Milana, Gazizova, 8 777 77 77 777, Minecraft st 1125, http://spirt.com
+Iskander, Ghoul, 81231231231, Lenin st 52, http://ded.ru
+Ivan, Ivanov, +7 977 77 77 777, Unknown street 46, http://google.com
+Karim, Ivanov, +79375295624, Pushkina 18, http://flatstack.com
+RandomName, RandomSecondName, 81233211233, RandomStreet 9, http://random-site.com
+Petr, Sergeev, , Pobedy 105, http://yandex.ru
+Askar, Sergeev, , Pobedy 105, http://yandex.ru
+Zhenya, Sergeeva, , Pobedy 20, http://yandex.ru
+Kirill, Sviridov, 88005553535, Pobedy 22, http://localhost:8080/minecraft
+Aleksey, Tn.n, 89871116063, Alkogolnaya st 1, http://telegram.com
