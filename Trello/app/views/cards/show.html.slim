@@ -1,0 +1,28 @@
+p#notice
+  = notice
+p#alert[style="color: red"]
+  = alert
+p
+  strong
+    | Title:
+  = @card.title
+= render "todos/form", card: @card, todo: @card.todo.build
+p
+  strong
+    | Todos:
+  ul
+    - @card.todo.each do |todo|
+      li
+        - if (!todo.id.nil?)
+          b
+            =	todo.title
+          | : 
+          =	todo.description
+          = link_to 'Destroy', todo_path(id:todo.id), method: 
+          -   				:delete, 
+          -   				data: {confirm: "Are you sure?"}
+          - - end
+      - - end
+= link_to 'Edit', edit_card_path(@card)
+|  | 
+= link_to 'Back', cards_path
