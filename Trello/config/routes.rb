@@ -1,6 +1,10 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
+  root to: 'home#show'
+   
   resources :cards do
-  	resources :todos, only: [:create]
+    resources :todos, only: [:create]
   end
 
   resources :todos, only: [:destroy]

@@ -1,23 +1,20 @@
 p#notice
   = notice
+
+= image_tag 'work.jpg', class: 'mem'
 h1
   | Cards
-table
-  thead
-    tr
-      th
-        | Title
-      th[colspan="3"]
-  tbody
-    - @cards.each do |card|
-      tr
-        td
-          = card.title
-        td
-          = link_to 'Show', card
-        td
-          = link_to 'Edit', edit_card_path(card)
-        td
-          = link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' }
-br
 = link_to 'New Card', new_card_path
+ 
+ul.cards-list
+  - @cards.each do |card|
+    li.cards-list__item
+      .cards-list__header
+        = link_to card.title, card
+      .cards-list__icons
+        = link_to edit_card_path(card), class: 'cards-list__icon' do
+          = image_tag 'edit.svg'
+        = link_to card, method: :delete, data: { confirm: 'Are you sure?' }, class: 'cards-list__icon' do
+          = image_tag 'delete.svg'
+br
+

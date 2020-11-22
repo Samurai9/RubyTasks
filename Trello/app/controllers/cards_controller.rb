@@ -1,16 +1,18 @@
-class CardsController < ApplicationController
-  before_action :set_card, only: [:show, :edit, :update, :destroy]
+# frozen_string_literal: true
 
+class CardsController < ApplicationController
+  before_action :set_card, only: %i[show edit update destroy]
+
+  layout 'cards'
   # GET /cards
   # GET /cards.json
   def index
-    @cards = Card.all
+    @cards = Card.actual
   end
 
   # GET /cards/1
   # GET /cards/1.json
-  def show
-  end
+  def show; end
 
   # GET /cards/new
   def new
@@ -18,8 +20,7 @@ class CardsController < ApplicationController
   end
 
   # GET /cards/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /cards
   # POST /cards.json
@@ -62,13 +63,14 @@ class CardsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_card
-      @card = Card.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def card_params
-      params.require(:card).permit(:title)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_card
+    @card = Card.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def card_params
+    params.require(:card).permit(:title)
+  end
 end

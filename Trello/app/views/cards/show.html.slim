@@ -7,6 +7,8 @@ p
     | Title:
   = @card.title
 = render "todos/form", card: @card, todo: @card.todo.build
+
+
 p
   strong
     | Todos:
@@ -18,11 +20,10 @@ p
             =	todo.title
           | : 
           =	todo.description
-          = link_to 'Destroy', todo_path(id:todo.id), method: 
-          -   				:delete, 
-          -   				data: {confirm: "Are you sure?"}
-          - - end
-      - - end
+          = link_to 'Destroy', todo_path(id:todo.id), method: :delete, 
+             				data: {confirm: "Are you sure?"}
+          end
+    end
 = link_to 'Edit', edit_card_path(@card)
 |  | 
 = link_to 'Back', cards_path

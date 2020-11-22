@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class CardsControllerTest < ActionDispatch::IntegrationTest
@@ -5,17 +7,17 @@ class CardsControllerTest < ActionDispatch::IntegrationTest
     @card = cards(:one)
   end
 
-  test "should get index" do
+  test 'should get index' do
     get cards_url
     assert_response :success
   end
 
-  test "should get new" do
+  test 'should get new' do
     get new_card_url
     assert_response :success
   end
 
-  test "should create card" do
+  test 'should create card' do
     assert_difference('Card.count') do
       post cards_url, params: { card: { title: @card.title } }
     end
@@ -23,22 +25,22 @@ class CardsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to card_url(Card.last)
   end
 
-  test "should show card" do
+  test 'should show card' do
     get card_url(@card)
     assert_response :success
   end
 
-  test "should get edit" do
+  test 'should get edit' do
     get edit_card_url(@card)
     assert_response :success
   end
 
-  test "should update card" do
+  test 'should update card' do
     patch card_url(@card), params: { card: { title: @card.title } }
     assert_redirected_to card_url(@card)
   end
 
-  test "should destroy card" do
+  test 'should destroy card' do
     assert_difference('Card.count', -1) do
       delete card_url(@card)
     end

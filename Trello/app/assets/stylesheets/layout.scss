@@ -1,0 +1,18 @@
+.header{
+  display: flex;
+  justify-content: space-around;
+  background-color: $grey;
+  
+  &__link{
+    margin: 5px;
+    text-decoration: none;
+    padding: 5px;
+    background-color: darken($grey, 10);
+    font-size: 20px; 
+    box-shadow: 2px 2px 10px 0 rgba($black, 0.4);
+  }
+}
+.menu {
+  display: flex;
+  align-items: center;
+} 
