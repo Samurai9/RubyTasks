@@ -5,5 +5,5 @@ class Card < ApplicationRecord
   validates :title, presence: true
 
   # scope :actual, -> { where(created_at: Date.today - 1.month) }
-  scope :actual, -> { }
+  scope :actual, -> {}
 end

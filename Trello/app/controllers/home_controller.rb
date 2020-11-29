@@ -1,7 +1,7 @@
+# frozen_string_literal: true
+
 class HomeController < ApplicationController
-  
   # layout 'cards'
-  
-  def show
-  end
+
+  def show; end
 end

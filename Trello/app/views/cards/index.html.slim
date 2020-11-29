@@ -1,20 +1,24 @@
-p#notice
-  = notice
+.cards.js-cards
+  p#notice
+    = notice
+  h1
+    ' Cards
+    span.sorter.js-sort-asc Sort by title
+    span.sorted.js-sort-desc.hidden Reverse sort by title
+
+  button.btn.btn-light type="button"
+    = link_to 'New Card', new_card_path
+
+  ul.cards-list.js-cards-list
+    - @cards.each do |card|
+      li.cards-list__item.js-item data-card=card.to_json
+        .cards-list__header
+          = link_to card.title, card
+        .cards-list__icons
+          = link_to edit_card_path(card), class: 'cards-list__icon' do
+            = image_tag 'edit.svg'
+          = link_to card, method: :delete, data: { confirm: 'Are you sure?' }, class: 'cards-list__icon' do
+            = image_tag 'delete.svg'
+  br
 
 = image_tag 'work.jpg', class: 'mem'
-h1
-  | Cards
-= link_to 'New Card', new_card_path
- 
-ul.cards-list
-  - @cards.each do |card|
-    li.cards-list__item
-      .cards-list__header
-        = link_to card.title, card
-      .cards-list__icons
-        = link_to edit_card_path(card), class: 'cards-list__icon' do
-          = image_tag 'edit.svg'
-        = link_to card, method: :delete, data: { confirm: 'Are you sure?' }, class: 'cards-list__icon' do
-          = image_tag 'delete.svg'
-br
-

@@ -1,7 +1,6 @@
-= form_with(url: card_todos_url(card_id: card.id), 
-- method: :post) do |form|
+= form_with(url: card_todos_url(card_id: card.id),  method: :post) do |form|
 - if todo.errors.any?
-  #error_explanation
+  #error-explanation
     h2
       = pluralize(todo.errors.count, "error")
       |  prohibited this todo from being saved:
@@ -9,10 +8,10 @@
       - todo.errors.full_messages.each do |message|
         li
           = message
-.field
-  = form.label :title
-  = form.text_field :title
-  = form.label :description
-  = form.text_field :description
-.actions
-  = form.submit
+  .field
+    = form.label :title
+    = form.text_field :title
+    = form.label :description
+    = form.text_field :description
+  .actions
+    = form.submit

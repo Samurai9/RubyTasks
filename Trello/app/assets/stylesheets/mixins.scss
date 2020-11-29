@@ -1,13 +1,15 @@
-@mixin change-opacity-mixin($name){
-    @keyframes #{$name} {
-        0% {
-            opacity: 0.0;
-        }
-        50% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-        }
+@mixin change-opacity-mixin($name) {
+  @keyframes #{$name} {
+    0% {
+      opacity: 0;
     }
+
+    50% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
 }
